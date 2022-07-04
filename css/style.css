@@ -1,0 +1,333 @@
+:root {
+    --pink: #f5a9b8;
+    --pink-translucent: rgba(245, 169, 184, 0.7);
+    --white: #ffffff;
+    --black: #000000;
+    --background: url('../img/background2.png');
+    --shadow: -3px 6px 24px hsla(328.6, 41.2%, 10%, 0.4);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    cursor: url('../img/cursor/default.cur'), auto;
+}
+
+/*
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+    cursor: text;
+}
+*/
+
+*:link {
+    cursor: url('../img/cursor/pointer.cur'), auto;
+}
+
+
+body {
+    background: var(--background) right / cover fixed no-repeat;
+}
+
+ul {
+    margin-bottom: 2em;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+.nobreak {
+    white-space: nowrap;
+}
+
+@keyframes rainbow-text {
+    0% {
+        color: red;
+    }
+
+    12.5% {
+        color: orange;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    37.5% {
+        color: lime;
+    }
+
+    50% {
+        color: green;
+    }
+
+    62.5% {
+        color: cyan;
+    }
+    
+    75% {
+        color: blue;
+    }
+
+    87.5% {
+        color: violet;
+    }
+
+
+    100% {
+        color: red;
+    }
+}
+
+.rainbow {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 1.2em;
+    animation: rainbow-text 5s infinite linear;
+}
+
+/* rainbows are cool but seizures aren't */
+@media (prefers-reduced-motion) {
+    .rainbow {
+        animation: none;
+    }
+}
+
+.small-text {
+    font-size: 0.7m;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: row;
+    background: var(--pink-translucent);
+    min-height: 100%;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    overflow: hidden;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.floating-buttons {
+    position: relative;
+    margin: 4rem;
+    align-self: flex-end;
+    width: 100%;
+    text-align: right;
+}
+
+.banner-button {
+    text-decoration: none;
+}
+
+.banner-button img {
+    border: 2px solid transparent;
+    image-rendering: pixelated;
+}
+
+
+.banner-button:hover img {
+    border-color: var(--pink);
+}
+
+.floating-buttons .banner-button:hover img {
+    border-color: var(--white);
+}
+
+.floating-card {
+    position: relative;
+    min-width: 25%;
+    padding: 2.5rem 4rem;
+    margin: 4rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.floating-card.light {
+    color: var(--black);
+    background: var(--white);
+}
+
+.floating-card.light a {
+    text-decoration: none;
+    color: #ef3358;
+}
+
+.floating-card.light a:hover {
+    text-decoration: underline;
+}
+
+.floating-card.info {
+    align-self: flex-end;
+}
+
+.overlay.center {
+    justify-content: center;
+}
+
+.floating-card.me {
+    align-self: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--pink);
+
+    width: 1em;
+    height: 1em;
+    display: block;
+
+    margin: 0.5em;
+}
+
+
+.links a:first-child {
+    margin-left: 0;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+}
+
+.links i {
+    height: 1em;
+    width: 1em;
+    text-align: center;
+}
+
+.links .link-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    flex: 1;
+    margin-right: 0.25rem;
+}
+
+a .tooltip {
+    position: absolute;
+    font-size: 1rem;
+    line-height: 1em;
+    margin-left: 1em;
+    padding: 0.5em 0.75em;
+    font-weight: 900;
+    visibility: hidden;
+    border-radius: 3px;
+    z-index: 1;
+    background: var(--black);
+    color: var(--white);
+}
+
+a .tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -0.75em;
+    left: -1em;
+    border: solid 0.75em transparent;
+    border-right-color: var(--black);
+    z-index: 1;
+}
+
+a:hover .tooltip {
+    visibility: visible;
+}
+
+a .tooltip:hover {
+    visibility: hidden;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    margin-left: -8px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+}
+
+.back-btn:hover {
+    border-color: var(--pink);
+}
+
+.back-btn img {
+    height: 1em;
+}
+
+.at {
+    font-size: 0;
+}
+
+.at::before {
+    font-size: initial;
+    content: " [at] ";
+}
+
+.email:hover .at::before {
+    content: "@";
+}
+
+@media screen and (max-width: 1024px) {
+    .overlay {
+        flex-direction: column;
+    }
+
+    .floating-card {
+        width: auto;
+        max-width: max-content;
+        align-self: center !important;
+        padding: 2rem 3rem;
+        margin: 4rem auto;
+    }
+
+    .floating-buttons {
+        margin-top: 0;
+        margin-bottom: 2em;
+        align-self: center !important;
+        text-align: center;
+    }
+
+    .floating-card:not(.me) {
+        text-align: center;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .links a:first-child {
+        margin-left: 0.5em;
+    }
+
+    .links .link-icons {
+        margin-right: 0 !important;
+    }
+
+    .links > * {
+        display: flex;
+        justify-content: center;
+    }
+}
