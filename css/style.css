@@ -1,9 +1,9 @@
 :root {
-    --pink: #f5a9b8;
-    --pink-translucent: rgba(245, 169, 184, 0.7);
+    --purple: #F02FC;
+    --blue-translucent: rgba(96, 148, 234, 0.6);
     --white: #ffffff;
     --black: #000000;
-    --background: url('../img/background2.png');
+    --background: url('../img/background2.jpg');
     --shadow: -3px 6px 24px hsla(328.6, 41.2%, 10%, 0.4);
 }
 
@@ -112,7 +112,7 @@ li {
 .overlay {
     display: flex;
     flex-direction: row;
-    background: var(--pink-translucent);
+    background: var(--blue-translucent);
     min-height: 100%;
 }
 
@@ -148,7 +148,7 @@ li {
 
 
 .banner-button:hover img {
-    border-color: var(--pink);
+    border-color: var(--purple);
 }
 
 .floating-buttons .banner-button:hover img {
@@ -171,7 +171,7 @@ li {
 
 .floating-card.light a {
     text-decoration: none;
-    color: #ef3358;
+    color: #1a3bf8;
 }
 
 .floating-card.light a:hover {
@@ -192,7 +192,7 @@ li {
 
 .links a {
     text-decoration: none;
-    color: var(--pink);
+    color: var(--purple);
 
     width: 1em;
     height: 1em;
@@ -270,7 +270,7 @@ a .tooltip:hover {
 }
 
 .back-btn:hover {
-    border-color: var(--pink);
+    border-color: var(--purple);
 }
 
 .back-btn img {
