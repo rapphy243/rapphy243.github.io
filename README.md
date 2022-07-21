@@ -1,6 +1,6 @@
 # If you're going to use this as a base, PLEASE include the original license in your repository!
 
-# yuwui.github.io
+# rapphy243.github.io
 
-source for my [website](https://yui.lol)
+source for my [website](https://web.rapph.dev)
 
