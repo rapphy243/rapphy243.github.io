@@ -3,12 +3,13 @@
     --blue-translucent: rgba(96, 148, 234, 0.6);
     --white: #ffffff;
     --black: #000000;
+    --gray: #808080; 
     --background: url('../img/background2.jpg');
     --shadow: -3px 6px 24px hsla(328.6, 41.2%, 10%, 0.4);
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 *, *::before, *::after {
@@ -178,8 +179,22 @@ li {
     text-decoration: underline;
 }
 
+.floating-card.dark {
+    color: var(--white);
+    background: var(--gray);
+}
+
+.floating-card.dark a {
+    text-decoration: none;
+    color: #1a3bf8;
+}
+
+.floating-card.dark a:hover {
+    text-decoration: underline;
+}
+
 .floating-card.info {
-    align-self: flex-end;
+    align-self: center;
 }
 
 .overlay.center {
