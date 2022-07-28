@@ -1,4 +1,4 @@
-# If you're going to use this as a base, Include the original license in your repository! 😡
+# If you're going to use this as a base, Include the original license in your repository!
 # rapphy243.github.io
 
 - Source for my [website](https://web.rapph.dev)
