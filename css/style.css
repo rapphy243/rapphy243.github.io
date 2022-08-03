@@ -1,6 +1,7 @@
 :root {
     --purple: #F02FC;
     --blue-translucent: rgba(96, 148, 234, 0.6);
+    --purple-translucent: rgba(238, 130, 205, 0.342);
     --white: #ffffff;
     --black: #000000;
     --gray: #808080; 
@@ -113,7 +114,7 @@ li {
 .overlay {
     display: flex;
     flex-direction: row;
-    background: var(--blue-translucent);
+    background: linear-gradient(303deg, var(--blue-translucent), var(--purple-translucent));
     min-height: 100%;
 }
 
