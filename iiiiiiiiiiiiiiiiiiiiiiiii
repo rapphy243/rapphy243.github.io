@@ -44,10 +44,11 @@
                             <i class="fab fa-github"></i>
                             <span class="tooltip">GitHub</span>
                         </a>
-                        <a style="color:#1DA1F2" href="https://twitter.com/rapphy243">
+                        <!-- <a style="color:#1DA1F2" href="https://twitter.com/rapphy243">
                             <i class="fab fa-twitter"></i>
                             <span class="tooltip">Twitter</span>
                         </a>
+                        -->
                         <a style="color:#2D2926" href="https://steamcommunity.com/id/TheACG">
                             <i class="fab fa-steam"></i>
                             <span class="tooltip">Steam</span>
