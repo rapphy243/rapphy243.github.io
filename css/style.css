@@ -210,7 +210,7 @@ li {
 .links {
     display: flex;
     flex-direction: row;
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 .links i {
