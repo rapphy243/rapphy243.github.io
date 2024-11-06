@@ -1,10 +1,9 @@
 :root {
-    --purple: #F02FC;
+    --purple: #F02FC2;
     --blue-translucent: rgba(96, 148, 234, 0.6);
     --purple-translucent: rgba(238, 130, 205, 0.342);
     --white: #ffffff;
     --black: #000000;
-    --gray: #808080; 
     --background: url('../img/background.jpg');
     --shadow: -3px 6px 24px hsla(328.6, 41.2%, 10%, 0.4);
 }
@@ -40,106 +39,11 @@ li {
     white-space: nowrap;
 }
 
-@keyframes rainbow-text {
-    0% {
-        color: red;
-    }
-
-    12.5% {
-        color: orange;
-    }
-
-    25% {
-        color: yellow;
-    }
-
-    37.5% {
-        color: lime;
-    }
-
-    50% {
-        color: green;
-    }
-
-    62.5% {
-        color: cyan;
-    }
-    
-    75% {
-        color: blue;
-    }
-
-    87.5% {
-        color: violet;
-    }
-
-
-    100% {
-        color: red;
-    }
-}
-
-.rainbow {
-    font-family: "Comic Sans MS", sans-serif;
-    font-size: 1.2em;
-    animation: rainbow-text 5s infinite linear;
-}
-
-/* rainbows are cool but seizures aren't */
-@media (prefers-reduced-motion) {
-    .rainbow {
-        animation: none;
-    }
-}
-
-.small-text {
-    font-size: 0.7m;
-}
-
 .overlay {
     display: flex;
     flex-direction: row;
     background: linear-gradient(303deg, var(--blue-translucent), var(--purple-translucent));
     min-height: 100%;
-}
-
-.left-section {
-    display: flex;
-    flex-direction: row;
-    flex: 2;
-    overflow: hidden;
-}
-
-.right-section {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.floating-buttons {
-    position: relative;
-    margin: 4rem;
-    align-self: flex-end;
-    width: 100%;
-    text-align: right;
-}
-
-.banner-button {
-    text-decoration: none;
-}
-
-.banner-button img {
-    border: 2px solid transparent;
-    image-rendering: pixelated;
-}
-
-
-.banner-button:hover img {
-    border-color: var(--purple);
-}
-
-.floating-buttons .banner-button:hover img {
-    border-color: var(--white);
 }
 
 .floating-card {
@@ -165,21 +69,7 @@ li {
     text-decoration: underline;
 }
 
-.floating-card.dark {
-    color: var(--white);
-    background: var(--gray);
-}
-
-.floating-card.dark a {
-    text-decoration: none;
-    color: #1a3bf8;
-}
-
-.floating-card.dark a:hover {
-    text-decoration: underline;
-}
-
-.floating-card.info {
+.floating-card.info, .floating-card.me {
     align-self: center;
 }
 
@@ -187,18 +77,27 @@ li {
     justify-content: center;
 }
 
-.floating-card.me {
-    align-self: center;
+.floating-card .back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none !important;
+}
+
+.floating-card .back-link:hover i {
+    text-decoration: none;
+}
+
+.floating-card .back-link:hover span {
+    text-decoration: underline;
 }
 
 .links a {
     text-decoration: none;
     color: var(--purple);
-
     width: 1em;
     height: 1em;
     display: block;
-
     margin: 0.5em;
 }
 
@@ -261,30 +160,15 @@ a .tooltip:hover {
     visibility: hidden;
 }
 
-.back-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 2px 8px;
-    margin-left: -8px;
-    border: 2px solid transparent;
-    border-radius: 2px;
-}
-
-.back-btn:hover {
-    border-color: var(--purple);
-}
-
-.back-btn img {
-    height: 1em;
-}
-
 .at {
-    font-size: 0;
+    display: inline-block;
+    text-align: center;
 }
 
 .at::before {
-    font-size: initial;
     content: "[at]";
+    display: inline-block;
+    width: 100%;
 }
 
 .email:hover .at::before {
